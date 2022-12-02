@@ -153,13 +153,19 @@ main .secundario .portafolio .proyectos a{
     text-decoration: none;
     text-align: center;
 }
+main .secundario .portafolio .proyectos h1{
+    font-size: 24px;
+}
+
 main .secundario .portafolio .proyectos .proy a img{
+    opacity: 0.5;
     border-radius: 10px;
     border: 2px solid var(--color-principal);
     transition: all 0.4s ease;
 }
+
 main .secundario .portafolio .proyectos .proy a img:hover{
-    
+    opacity: 1;
     border: 2px solid var(--color-blanco);
     transform: scale(1.02);
 }
@@ -279,7 +285,7 @@ main .ternario .contacto .contacto_unitario .whatsaap:hover{
     border: 1px solid #0C9021 ;
     background-color: black;
     color:#0C9021;
-    transform: rotateZ(-5deg)
+    transform: rotateZ(-5deg);
 }
 main .ternario .contacto .contacto_unitario .telegram:hover{
     border: 1px solid #088DB7 ;
@@ -297,7 +303,7 @@ main .ternario .contacto .contacto_unitario .gmail:hover{
     border: 1px solid #DF0000 ;
     background-color: black;
     color:#DF0000;
-    transform: rotateZ(-5deg)
+    transform: rotateZ(-5deg);
 }
 
 main .ternario .contacto_adicional{
@@ -306,7 +312,7 @@ main .ternario .contacto_adicional{
 }
 main .ternario .contacto_adicional img{
     max-height: 70vh !important;
-    height:auto;
+
 }
 
 main .ternario .contacto .contacto_unitario .whatsaap{
