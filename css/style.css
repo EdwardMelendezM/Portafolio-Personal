@@ -1,0 +1,440 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@300;600&display=swap');
+:root{
+    --color-principal:#FF8303;
+    --color-blanco:#fff;
+    --font-letra-titulo:'Jost', sans-serif;
+}
+
+*,*::before, *::after{
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-letra-titulo);
+    color: var(--color-blanco);
+    box-sizing: border-box;
+    overflow-x: none;
+}
+
+body{
+    background-image: url(../img/main.png);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+}
+
+header nav{
+    width: 50%;
+    min-height: 20vh;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+}
+
+header nav a{
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    font-size: 16px;
+}
+header nav .color-n{
+    color: var(--color-principal);
+}
+header nav .color-n:hover{
+    color:var(--color-blanco)
+}
+header nav a:hover{
+    color:var(--color-principal);   
+    transition: all 0.4s ease;
+    transform:scale(1.06);
+}
+main{
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+}
+main .principal{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    width: 80%;
+    min-height: 80vh;
+}
+main .principal .mitad{
+    width: 50%;
+    display: flex;  
+    justify-content: center;
+    align-self: center;
+}
+main .principal .mitad img{
+    max-width: 500px;
+    width: auto;
+    transition: all 300ms;
+
+}
+main .principal .mitad img:hover{
+    
+    transform: rotate(-20deg);
+    transform-origin: left center;
+    
+}
+main .principal .mitad h1{
+    color: var(--color-blanco);
+    font-size: 45px;
+}
+main .principal .mitad .titulos .color-n{
+    color:var(--color-principal)
+}
+main .principal .mitad .titulos .pie{
+    font-size: 15px;
+    text-align: right;
+    margin-top: 8px;
+}
+
+main .principal .color-n{
+    color:var(--color-principal)
+}
+
+/*-------------------------------------------------------------------------------*/
+/*--------------------------- MAIN SECUNDARIO ----------------------------------*/
+/*-------------------------------------------------------------------------------*/
+
+main .secundario{
+    width: 80%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+main .secundario .titulo{
+    margin-top: 10px;
+    font-size: 40px;
+}
+main .secundario .portafolio{
+    width: 100%;
+    min-height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+main .secundario .portafolio .proyectos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main .secundario .portafolio .proyectos{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 30px;
+}
+main .secundario .portafolio .proyectos .proy{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+main .secundario .portafolio .proyectos a{
+    text-decoration: none;
+    text-align: center;
+}
+main .secundario .portafolio .proyectos .proy a img{
+    border-radius: 10px;
+    border: 2px solid var(--color-principal);
+    transition: all 0.4s ease;
+}
+main .secundario .portafolio .proyectos .proy a img:hover{
+    
+    border: 2px solid var(--color-blanco);
+    transform: scale(1.02);
+}
+main .secundario .portafolio button{
+    margin-top: 25px;
+    width: 310px;
+    height: 60px;
+    border-radius: 10px;
+    background-color: var(--color-principal);
+    color:var(--color-blanco);
+    font-size: 18px;
+    transition: all 0.4s ease;
+}
+main .secundario .portafolio button:hover{
+    background-color: black;
+    color: var(--color-principal);
+    border: 1px solid var(--color-principal);
+
+}
+main .secundario .skills{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+main .secundario .skills .todoskills{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+main .secundario .skills .todoskills .logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+main .secundario .skills .todoskills .logo img{
+    transition: all 0.6s ease;
+}
+main .secundario .skills .todoskills .logo img:hover{
+    transform: rotateZ(-11deg);
+}
+main .secundario .skills .todoskills .logo h1{
+    text-align: center;
+
+}
+main .secundario .skills .todoskills .sub_titulo {
+    font-size: 26px;
+}
+main .secundario .skills .todoskills .sub_titulo::after,
+main .secundario .skills .titulo_aux::after{
+    content: "";
+    height: 8px;
+    width: 0;
+    background: var(--color-principal);
+    display: block;
+    transition: all 300ms;
+}
+main .secundario .skills .todoskills .sub_titulo:hover::after,
+main .secundario .skills .titulo_aux:hover::after{
+    width: 100%;
+    cursor: pointer;
+}
+/*-------------------------------------------------------------------------------*/
+/*--------------------------- MAIN TERCERO ----------------------------------*/
+/*-------------------------------------------------------------------------------*/
+main .ternario{
+    min-height: 70vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main .ternario .contacto{
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: left;
+}
+main .ternario .contacto .titulo_contacto{
+    font-size: 40px;
+    margin-bottom: 40px;
+}
+main .ternario .contacto .contacto_unitario{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    gap: 25px;
+    text-align: left;
+}
+main .ternario .contacto .contacto_unitario a{
+    
+    text-decoration: none;
+    text-align: left;
+    font-size: 18px;
+    font-variant: small-caps;
+    transition: all 0.6s ease;
+    
+    
+}
+main .ternario .contacto .contacto_unitario .a_contacto{
+    border-radius: 20px 5%;
+    width: 210px;
+    height: auto;
+    padding: 10px;
+}
+main .ternario .contacto .contacto_unitario .a_img:hover{
+    transition: all 0.6s ease;
+    transform: rotateZ(20deg);
+    
+}
+main .ternario .contacto .contacto_unitario .whatsaap:hover{
+    border: 1px solid #0C9021 ;
+    background-color: black;
+    color:#0C9021;
+    transform: rotateZ(-5deg)
+}
+main .ternario .contacto .contacto_unitario .telegram:hover{
+    border: 1px solid #088DB7 ;
+    background-color: black;
+    color:#088DB7;
+    transform: rotateZ(-5deg)
+}
+main .ternario .contacto .contacto_unitario .facebook:hover{
+    border: 1px solid #6c92f1 ;
+    background-color: black;
+    color:#6c92f1;
+    transform: rotateZ(-5deg)
+}
+main .ternario .contacto .contacto_unitario .gmail:hover{
+    border: 1px solid #DF0000 ;
+    background-color: black;
+    color:#DF0000;
+    transform: rotateZ(-5deg)
+}
+
+main .ternario .contacto_adicional{
+    width: 60%;
+    min-height: 70vh;
+}
+main .ternario .contacto_adicional img{
+    max-height: 70vh !important;
+    height:auto;
+}
+
+main .ternario .contacto .contacto_unitario .whatsaap{
+    background-color: #0C9021;
+}
+main .ternario .contacto .contacto_unitario .telegram{
+    background-color: #088DB7;
+}
+main .ternario .contacto .contacto_unitario .facebook{
+    background-color: #2C5EE0;
+}
+main .ternario .contacto .contacto_unitario .gmail{
+    background-color: #DF0000;
+}
+footer{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 30vh;
+    background-color: var(--color-principal);
+    border-radius: 25px 25px / 25px 25px 0px 0px;
+}
+
+footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+footer .acerca_de_mi,footer .otros_datos{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer .acerca_de_mi .contenedor{
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+}
+footer .otros_datos .contenedor{
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-direction: column;
+    gap: 10px;
+}
+footer .acerca_de_mi .contenedor h1,footer .otros_datos .contenedor h1{
+    font-size: 22px;
+    letter-spacing: 1.3px;
+}
+footer .acerca_de_mi p{
+    font-size: 15px;
+    letter-spacing: 1.3px;
+}
+
+@media (max-width:1250px){
+    main .secundario .titulo{
+        margin-bottom: 50px;
+    }
+    main .secundario .portafolio .proyectos{
+        flex-direction: column;
+    }
+    main .secundario .portafolio .proyectos .proy a img{
+        width: 80%;
+    }
+}
+
+@media (max-width:1125px){
+    main .ternario .contacto_adicional{
+        display: none;
+    }
+    main .secundario .skills{
+        margin-top: 50px;
+    }
+}
+@media (max-width:1085px){
+    main .principal .mitad img{
+        max-width:400px ;
+    }
+    footer{
+        justify-content: center;
+        flex-direction: column;
+    }
+    footer .acerca_de_mi{
+        margin-top: 30px;
+        margin-bottom: 20px;
+    }
+}
+@media (max-width:817px){
+    main .principal{
+        margin-top: 10px;
+        flex-direction:column-reverse;
+    }
+    main .principal .mitad .titulos{
+        margin-top: 3px;
+    }
+    main .principal .mitad h1{
+        color: var(--color-blanco);
+        font-size: 50px;
+        text-align: center;
+    }
+    header nav{
+        width: 100%;
+    }
+    main .secundario .skills{
+        margin-top: 50px;
+    }
+    main .secundario .skills{
+        flex-direction: column;
+    }
+    main .secundario .skills .todoskills .logo img{
+        width: 100%;
+    }
+    main .secundario .skills .todoskills .logo .sub_titulo{
+        font-size   : 100%;
+    }
+    footer{
+        width: 100%;
+    }
+    footer .acerca_de_mi,footer .otros_datos{
+        width: 100%;
+    }
+    footer .contenedor{
+        padding: 10px;
+    }
+}   
