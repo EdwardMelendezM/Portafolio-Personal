@@ -41,6 +41,7 @@ header nav a{
     text-align: center;
     color: white;
     font-size: 16px;
+    animation: moverHorizontal 1s ease-in infinite alternate;
 }
 header nav .color-n{
     color: var(--color-principal);
@@ -85,14 +86,9 @@ main .principal .mitad img{
     max-width: 500px;
     width: auto;
     transition: all 300ms;
+    
+}
 
-}
-main .principal .mitad img:hover{
-    
-    transform: rotate(-20deg);
-    transform-origin: left center;
-    
-}
 main .principal .mitad h1{
     color: var(--color-blanco);
     font-size: 45px;
@@ -395,108 +391,3 @@ footer .acerca_de_mi p{
     font-size: 15px;
     letter-spacing: 1.3px;
 }
-
-/*-----------------------------------------------------*/
-/*---------      ESTILOS  CON  JAVASCRIPT    ----------*/
-/*-----------------------------------------------------*/
-.estilo_transform{
-    transition: all 0.8s ease;
-}
-
-.mostrarArriba{
-    animation: mostrarArriba 1s;
-}
-.mostrarDerecha{
-    animation: mostrarDerecha 1s;
-}
-@keyframes mostrarDerecha{
-    0%{
-        transform: translateX(-40px);
-    }
-    100%{
-        transform: translateX(0);
-    }
-}
-@keyframes mostrarArriba{
-    0%{
-        transform: translateY(-40px);
-    }
-    100%{
-        transform: translateY(0);
-    }
-}
-/*--------------------------------------------------------------------------*/
-/*------------- RESPONSIVE - CELULAR - LAPTOP - TABLET --------------------*/
-/*-------------------------------------------------------------------------*/
-@media (max-width:1250px){
-    main .secundario .titulo{
-        margin-bottom: 50px;
-    }
-    main .secundario .portafolio .proyectos{
-        flex-direction: column;
-    }
-    main .secundario .portafolio .proyectos .proy a img{
-        width: 80%;
-    }
-}
-
-@media (max-width:1125px){
-    main .ternario .contacto_adicional{
-        display: none;
-    }
-    main .secundario .skills{
-        margin-top: 50px;
-    }
-}
-@media (max-width:1085px){
-    main .principal .mitad img{
-        max-width:400px ;
-    }
-    footer{
-        justify-content: center;
-        flex-direction: column;
-    }
-    footer .acerca_de_mi{
-        margin-top: 30px;
-        margin-bottom: 20px;
-    }
-}
-@media (max-width:817px){
-    main .principal{
-        margin-top: 10px;
-        flex-direction:column-reverse;
-    }
-    main .principal .mitad .titulos{
-        margin-top: 3px;
-    }
-    main .principal .mitad h1{
-        color: var(--color-blanco);
-        font-size: 50px;
-        text-align: center;
-    }
-    header nav{
-        width: 100%;
-    }
-    main .secundario .skills{
-        margin-top: 50px;
-    }
-    main .secundario .skills{
-        flex-direction: column;
-    }
-    main .secundario .skills .todoskills .logo img{
-        width: 100%;
-    }
-    main .secundario .skills .todoskills .logo .sub_titulo{
-        font-size   : 100%;
-    }
-    footer{
-        width: 100%;
-    }
-    footer .acerca_de_mi,footer .otros_datos{
-        width: 100%;
-    }
-    footer .contenedor{
-        padding: 10px;
-    }
-}   
-
