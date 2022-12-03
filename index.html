@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="./css/style.css">
     <title>Portafolio</title>
 </head>
-
 <body>
     <header>
         <nav>
@@ -22,7 +21,7 @@
     <!-- ------------- PRIMERA PARTE ------------->
     <!-- ------------------------------------------->
     <main>
-        <div class="principal">
+        <div class="principal estilo_transform" id="estilo_aparecer">
             <div class="mitad">
                 <img src="./img/logo.png" alt="">
             </div>
@@ -41,7 +40,7 @@
         <!-- ------------- SEGUNDA PARTE ------------->
         <!-- ------------------------------------------->
 
-        <div class="secundario">
+        <div class="secundario estilo_transform" id="estilo_aparecer">
             <h1 class="titulo">Portafolio</h1>
             <div class="portafolio">
 
@@ -96,7 +95,7 @@
         <!-- ------------------------------------------->
         <!-- ------------- SEGUNDA PARTE ------------->
         <!-- ------------------------------------------->
-        <div class="ternario">
+        <div class="ternario .estilo_transform" id="estilo_aparecer_derecha">
             <div class="contacto">
                 <h1 class="titulo_contacto ">Contacto</h1>
                 <div class="contacto_unitario">
@@ -117,7 +116,10 @@
                 </div>
             </div>
             <div class="contacto_adicional">
-                <img src="./img/logo_code.png" alt="">
+                <!--<img src="./img/logo_code.png" alt=""> -->
+                <div class="contenedor">
+                    <div class="parallax"></div>
+                </div>
             </div>
         </div>
     </main>
@@ -141,6 +143,7 @@
 
         </div>
     </footer>
+    <script src="./js/index.js"></script>
 </body>
 
 </html>

@@ -51,8 +51,7 @@ header nav .color-n:hover{
 }
 header nav a:hover{
     color:var(--color-principal);   
-    transition: all 0.4s ease;
-    transform:scale(1.06);
+    transition: transform 0.4s ease;
 }
 main{
     min-height: 80vh;
@@ -63,13 +62,20 @@ main{
     height: 100%;
     flex-direction: column;
 }
+.activar_opacidad{
+    opacity: 1;
+    transform: rotateX(0deg);
+}
 main .principal{
     display: flex;
     justify-content: center;
     align-self: center;
     width: 80%;
     min-height: 80vh;
+    opacity: 0;
+    transition: all 0.8s ease;
 }
+
 main .principal .mitad{
     width: 50%;
     display: flex;  
@@ -116,6 +122,8 @@ main .secundario{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    opacity: 0;
+    transition: all 0.8s ease;
 }
 main .secundario .titulo{
     margin-top: 10px;
@@ -161,12 +169,13 @@ main .secundario .portafolio .proyectos .proy a img{
     opacity: 0.5;
     border-radius: 10px;
     border: 2px solid var(--color-principal);
-    transition: all 0.4s ease;
+    transition:transform 0.4s ease;
 }
 
 main .secundario .portafolio .proyectos .proy a img:hover{
     opacity: 1;
     border: 2px solid var(--color-blanco);
+    box-shadow: 0 0 10px var(--color-principal);
     transform: scale(1.02);
 }
 main .secundario .portafolio button{
@@ -177,13 +186,14 @@ main .secundario .portafolio button{
     background-color: var(--color-principal);
     color:var(--color-blanco);
     font-size: 18px;
-    transition: all 0.4s ease;
+    transition:0.4s ease;
 }
 main .secundario .portafolio button:hover{
     background-color: black;
     color: var(--color-principal);
     border: 1px solid var(--color-principal);
-
+    box-shadow: 0 0 10px #DF0000;
+    
 }
 main .secundario .skills{
     width: 100%;
@@ -202,7 +212,6 @@ main .secundario .skills .todoskills .logo{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    
 }
 main .secundario .skills .todoskills .logo img{
     transition: all 0.6s ease;
@@ -240,6 +249,8 @@ main .ternario{
     display: flex;
     justify-content: center;
     align-items: center;
+    opacity: 0;
+    transition: all 0.8s ease;
 }
 main .ternario .contacto{
     width: 40%;
@@ -266,7 +277,7 @@ main .ternario .contacto .contacto_unitario a{
     text-align: left;
     font-size: 18px;
     font-variant: small-caps;
-    transition: all 0.6s ease;
+    transition: transform 0.6s ease;
     
     
 }
@@ -277,7 +288,7 @@ main .ternario .contacto .contacto_unitario .a_contacto{
     padding: 10px;
 }
 main .ternario .contacto .contacto_unitario .a_img:hover{
-    transition: all 0.6s ease;
+    transition: transform 0.6s ease;
     transform: rotateZ(20deg);
     
 }
@@ -313,6 +324,19 @@ main .ternario .contacto_adicional{
 main .ternario .contacto_adicional img{
     max-height: 70vh !important;
 
+}
+main .ternario .contacto_adicional .contenedor{
+    position: relative;
+    height: 70vh;
+    overflow: hidden;
+    width: 100%;
+}
+main .ternario .contacto_adicional .parallax{
+    position: absolute;
+    width: 100%;
+    background-image: url(../img/logo_code.png);
+    background-size: cover;
+    height: 120vh;
 }
 
 main .ternario .contacto .contacto_unitario .whatsaap{
@@ -373,6 +397,38 @@ footer .acerca_de_mi p{
     letter-spacing: 1.3px;
 }
 
+/*-----------------------------------------------------*/
+/*---------      ESTILOS  CON  JAVASCRIPT    ----------*/
+/*-----------------------------------------------------*/
+.estilo_transform{
+    transition: all 0.8s ease;
+}
+
+.mostrarArriba{
+    animation: mostrarArriba 1s;
+}
+.mostrarDerecha{
+    animation: mostrarDerecha 1s;
+}
+@keyframes mostrarDerecha{
+    0%{
+        transform: translateX(-40px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+@keyframes mostrarArriba{
+    0%{
+        transform: translateY(-40px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+/*--------------------------------------------------------------------------*/
+/*------------- RESPONSIVE - CELULAR - LAPTOP - TABLET --------------------*/
+/*-------------------------------------------------------------------------*/
 @media (max-width:1250px){
     main .secundario .titulo{
         margin-bottom: 50px;
@@ -444,3 +500,4 @@ footer .acerca_de_mi p{
         padding: 10px;
     }
 }   
+
