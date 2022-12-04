@@ -13,8 +13,18 @@
 .mostrarDerecha{
     animation: mostrarDerecha 1s;
 }
+.mostrarIzquierda{
+    animation: mostrarIzquierda 1s;
+}
 
-
+@keyframes mostrarIzquierda{
+    0%{
+        transform: translateX(40px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
 @keyframes mostrarDerecha{
     0%{
         transform: translateX(-40px);

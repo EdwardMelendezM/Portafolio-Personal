@@ -51,6 +51,28 @@
     header nav{
         width: 100%;
     }
+    main .secundario .portafolio{
+        min-height: auto;
+        margin-top: 0;
+    }
+    main .secundario .portafolio .proyectos{
+        min-height: auto;
+        margin-top:0;
+        width: 90%; 
+    }
+    main .secundario .portafolio .proyectos .proyectos .proy{
+        height: auto;
+        margin:0;
+        width: 90%;
+    }
+
+    main .secundario .portafolio .proyectos .proy a img{
+        width: 98%;
+    }
+    main .secundario .portafolio button{
+        width: auto;
+        padding: 0px 10px;
+    }
     main .secundario .skills{
         margin-top: 50px;
     }
@@ -73,4 +95,8 @@
         padding: 10px;
     }
 }   
-
+@media (max-width:425px){
+    main .principal .mitad img{
+        max-width:300px ;
+    }
+}

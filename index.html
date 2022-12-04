@@ -5,21 +5,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="./css/animacion.css">
     <link rel="stylesheet" href="./css/responsive.css">
 
     <title>Portafolio</title>
 </head>
+
 <body>
     <header>
         <nav>
-            <a href="" class="color-n">Acerca de mi</a>
-            <a href="">Portafolio</a>
-            <a href="">CV</a>
-            <a href="">Contacto</a>
+            <a href="#" class="color-n">Acerca de mi</a>
+            <a href="#portafolio">Portafolio</a>
+            <a href="./cv.html">CV</a>
+            <a href="#contacto">Contacto</a>
         </nav>
-        
+
     </header>
     <!-- ------------------------------------------->
     <!-- ------------- PRIMERA PARTE ------------->
@@ -27,7 +28,7 @@
     <main>
         <div class="principal estilo_transform" id="estilo_aparecer">
             <div class="mitad">
-                <img src="./img/logo.png"  alt="logo principal">
+                <img src="./img/logo.png" alt="logo principal">
             </div>
             <div class="mitad">
                 <div class="titulos">
@@ -39,61 +40,47 @@
                 </div>
             </div>
         </div>
-        <!--
-        <div class="burbujas">
-            <div class="burbuja"></div>
-        </div>
-        -->
-
         <!-- ------------------------------------------->
         <!-- ------------- SEGUNDA PARTE ------------->
         <!-- ------------------------------------------->
 
         <div class="secundario estilo_transform" id="estilo_aparecer_arriba">
-            <h1 class="titulo">Portafolio</h1>
+            <h1 class="titulo" id="portafolio">Portafolio</h1>
+
             <div class="portafolio">
 
-                <div class="proyectos">
-                    <div class="proy">
-                        <a href="./">
-                            <img src="./img/proyGymAfit.JPG" alt="" width="380px">
-                            <h1>Afit gym</h1>
-                        </a>
-
-                    </div>
-                    <div class="proy">
-                        <a href="./">
-                            <img src="./img/proyCasaMiau.JPG" alt="" width="380px">
-                            <h1>Casa Miau</h1>
+                <div class="proyectos" id="espacio_proyecto" data-value="0">
+                    <!--<div class="proy ${movimiento}">
+                        <a href="${proy.link}">
+                            <img src="${proy.img}" alt="" width="700px">
+                            <h1>${proy.title}</h1>
                         </a>
                     </div>
-                    <div class="proy">
-                        <a href="./">
-                            <img src="./img/proyCentroComputo.JPG" alt="" width="380px">
-                            <h1>Centro Computo Unsaac</h1>
-                        </a>
-                    </div>
+                    -->
                 </div>
-                <a href=""><button>Ver mas →</button></a>
+                <div class="botones">
+                    <button id="button_atras">←</button>
+                    <button id="button_siguiente">→</button>
+                </div>
 
             </div>
             <div class="skills">
                 <h1 class="titulo_aux">Mis Skills</h1>
                 <div class="todoskills">
                     <div class="logo">
-                        <img class="imagen" src="./img/logoHtml.png" alt="">
+                        <img class="imagen" src="./img/logoHtml.png" alt="logo html">
                         <h1 class="sub_titulo">HTML</h1>
                     </div>
                     <div class="logo">
-                        <img class="imagen" src="./img/logoCss.png" alt="">
+                        <img class="imagen" src="./img/logoCss.png" alt="logo css">
                         <h1 class="sub_titulo">CSS</h1>
                     </div>
                     <div class="logo">
-                        <img class="imagen" src="./img/logoJavascript.png" alt="">
+                        <img class="imagen" src="./img/logoJavascript.png" alt="logo javascript">
                         <h1 class="sub_titulo">JAVASCRIPT</h1>
                     </div>
                     <div class="logo">
-                        <img class="imagen" src="./img/logoGitHub.png" alt="">
+                        <img class="imagen" src="./img/logoGitHub.png" alt="logo github">
                         <h1 class="sub_titulo"> GIT HUB</h1>
                     </div>
 
@@ -105,23 +92,32 @@
         <!-- ------------- SEGUNDA PARTE ------------->
         <!-- ------------------------------------------->
         <div class="ternario .estilo_transform" id="estilo_aparecer_derecha">
-            <div class="contacto">
+            <div class="contacto" id="contacto">
                 <h1 class="titulo_contacto ">Contacto</h1>
                 <div class="contacto_unitario">
-                    <a href="./" class="a_contacto whatsaap">Whatsaap →</a>
-                    <a href="" class="a_img"><img src="./img/logo_whatsaap.png" alt="" width="100px"></a>
+                    <a href="https://web.whatsapp.com/send?phone=51944703256&text=*_HOLA EDWARD, VENGO DE TU PORTAFOLIO VIRTUAL, CONTACTAME CUANDO ME LEAS_*"
+                        class="a_contacto whatsaap">Whatsaap →</a>
+                    <a href="https://web.whatsapp.com/send?phone=51944703256&text=*_HOLA EDWARD, VENGO DE TU PORTAFOLIO VIRTUAL, CONTACTAME CUANDO ME LEAS_*"
+                        class="a_img"><img src="./img/logo_whatsaap.png" alt="logo whatsaap" width="100px"></a>
                 </div>
                 <div class="contacto_unitario">
-                    <a href="./" class="a_contacto telegram">Telegram →</a>
-                    <a href="" class="a_img"><img src="./img/logo_telegram.png" alt="" width="100px"></a>
+                    <a href="https://t.me/+HfVViNgeoPhhMGUx" class="a_contacto telegram" id="button_telegram">Telegram →</a>
+                    <a href="https://t.me/+HfVViNgeoPhhMGUx" class="a_img" id="button_telegram">
+                        <img src="./img/logo_telegram.png" alt="logo telegram" width="100px" id="button_telegram">
+                    </a>
                 </div>
                 <div class="contacto_unitario">
-                    <a href="./" class="a_contacto facebook">Facebook →</a>
-                    <a href="" class="a_img"><img src="./img/logo_facebook.png" alt="" width="100px"></a>
+                    <a href="https://www.facebook.com/messages/t/100084526308774" class="a_contacto facebook">Facebook
+                        →</a>
+                    <a href="https://www.facebook.com/messages/t/100084526308774" class="a_img">
+                        <img src="./img/logo_facebook.png" alt="logo facebook" width="100px">
+                    </a>
                 </div>
                 <div class="contacto_unitario">
-                    <a href="./" class="a_contacto gmail">Gmail →</a>
-                    <a href="" class="a_img"><img src="./img/logo_gmail.png" alt="" width="100px"></a>
+                    <a href="./contacto_gmail.html" class="a_contacto gmail" id="button_gmail">Gmail →</a>
+                    <a href="./contacto_gmail.html" class="a_img" id="button_gmail">
+                        <img src="./img/logo_gmail.png" alt="logo gmail" width="100px" id="button_gmail">
+                    </a>
                 </div>
             </div>
             <div class="contacto_adicional">
@@ -152,8 +148,10 @@
 
         </div>
     </footer>
-    
+
     <script src="./js/index.js"></script>
+    <script src="./js/carrusel.js"></script>
+    <script src="./js/mensajeContacto.js"></script>
 </body>
 
 </html>
