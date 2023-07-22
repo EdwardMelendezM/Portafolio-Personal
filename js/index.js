@@ -2,13 +2,7 @@ const d = document;
 let animado = d.querySelectorAll("#estilo_aparecer")
 let animadoArriba = d.querySelectorAll("#estilo_aparecer_arriba")
 let animadoDerecha = d.querySelectorAll("#estilo_aparecer_derecha")
-let parallax=d.querySelector(".parallax");
 
-
-function scrollParalax(){
-    let scrollTop = d.documentElement.scrollTop;;
-    parallax.style.transform='translateY('+scrollTop*-0.2+'px)';
-}
 function mostrarElement(){
     animado.forEach(e=>{
         e.style.opacity=1;
@@ -38,5 +32,4 @@ function mostrarArriba(){
 
 window.addEventListener("scroll",mostrarArriba);
 window.addEventListener("scroll",mostrarDerecha);
-window.addEventListener("scroll",scrollParalax);
 window.addEventListener("DOMContentLoaded",mostrarElement);
