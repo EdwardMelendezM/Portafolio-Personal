@@ -13,6 +13,15 @@
     box-sizing: border-box;
     overflow-x: none;
 }
+.contener_vacio{
+    width: 100%;
+    padding-top: 10px;
+}
+.separador{
+    width: 100%;
+    opacity: 0.3;
+    margin-top: 10px;
+}
 
 body{
     background-image: url(../img/main.png);
@@ -81,6 +90,7 @@ main .principal .mitad{
     display: flex;  
     justify-content: center;
     align-self: center;
+    padding-left: 22px;
 }
 main .principal .mitad img{
     max-width: 500px;
@@ -91,15 +101,20 @@ main .principal .mitad img{
 
 main .principal .mitad h1{
     color: var(--color-blanco);
-    font-size: 45px;
+    font-size: 40px;
 }
 main .principal .mitad .titulos .color-n{
-    color:var(--color-principal)
+    color:var(--color-principal);
+    font-size: 60px;
+    font-weight: bolder;
+    line-height: 1.1;
+    
 }
 main .principal .mitad .titulos .pie{
     font-size: 15px;
     text-align: right;
     margin-top: 8px;
+    padding-bottom: 19px;
 }
 
 main .principal .color-n{
@@ -119,139 +134,77 @@ main .secundario{
     flex-direction: column;
     opacity: 0;
     transition: all 0.8s ease;
+    padding-top: 22px;
+    padding-bottom: 26px;
 }
 main .secundario .titulo{
     margin-top: 10px;
     font-size: 40px;
-    margin-bottom: 15px;
+    margin-bottom: 22px;
 }
-main .secundario .portafolio{
-    width: 100%;
-    min-height: 60vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-main .secundario .portafolio .proyectos{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-main .secundario .portafolio .proyectos{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    gap: 30px;
-}
-main .secundario .portafolio .proyectos .proy{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 10px;
-}
-main .secundario .portafolio .proyectos a{
-    text-decoration: none;
-    text-align: center;
-}
-main .secundario .portafolio .proyectos h1{
-    margin-top: 10px;
-    font-size: 22px ;
-}
-
-main .secundario .portafolio .proyectos .proy a img{
-    opacity: 0.5;
-    border-radius: 10px;
-    border: 2px solid var(--color-principal);
-    transition:transform 0.4s ease;
-}
-
-main .secundario .portafolio .proyectos .proy a img:hover{
-    opacity: 1;
-    border: 2px solid var(--color-blanco);
-    box-shadow: 0 0 10px var(--color-principal);
-    transform: scale(1.02);
-}
-main .secundario .portafolio button{
-    cursor: pointer;
-    margin-top: 25px;
-    width: 130px;
-    height: 50px;
-    border-radius: 10px;
-    background-color: var(--color-principal);
-    color:var(--color-blanco);
-    font-size: 26px;
-    transition:0.4s ease;
-    margin-top: 10px;
-}
-main .secundario .portafolio button:hover{
-    background-color: black;
-    color: var(--color-principal);
-    border: 1px solid var(--color-principal);
-    box-shadow: 0 0 10px #DF0000;
+main .secundario .portalofio_contenedor{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 11px;
+    column-gap: 11px;
     
 }
-main .secundario .skills{
-    margin-top: 20px;
+main .secundario .portalofio_contenedor .cuadro_proyecto{
     width: 100%;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+    max-height: 500px;
+    position: relative;
+    border-radius: 10px;
+    transition: border 0.3s ease-in-out;
+    
 }
-main .secundario .skills .todoskills{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
+main .secundario .portalofio_contenedor .cuadro_proyecto img{
+    width: 100%;
+    border-radius: 10px;
 }
-main .secundario .skills .todoskills .logo{
-    display: flex;
+main .secundario .portalofio_contenedor .cuadro_proyecto .cuadro_titulo {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0,0,0,0.8);
+    display: grid;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    border-radius: 10px;
+    border: 0;
+    transition: 0.3s ease-in;
+    &:hover {
+        background-color: rgba(0, 0, 0, 0.6);
+        border-bottom: 1px solid #ccc;
+        }
 }
-main .secundario .skills .todoskills .logo img{
-    transition: all 0.6s ease;
-}
-main .secundario .skills .todoskills .logo img:hover{
-    transform: rotateZ(-11deg);
-}
-main .secundario .skills .todoskills .logo h1{
-    text-align: center;
+
+main .secundario .portalofio_contenedor .cuadro_proyecto .cuadro_titulo a{
+    font-size: 23px;
+    color: #ccc;
+    font-weight: 500;
+    text-decoration: none;
+    transition: 0.3s ease-in;
+    &:hover{
+        font-size: 24px;
+    }
 
 }
-main .secundario .skills .todoskills .sub_titulo {
-    font-size: 26px;
-}
-main .secundario .skills .todoskills .sub_titulo::after,
-main .secundario .skills .titulo_aux::after{
-    content: "";
-    height: 8px;
-    width: 0;
-    background: var(--color-principal);
-    display: block;
-    transition: all 300ms;
-}
-main .secundario .skills .todoskills .sub_titulo:hover::after,
-main .secundario .skills .titulo_aux:hover::after{
-    width: 100%;
-    cursor: pointer;
-}
-/*-------------------------------------------------------------------------------*/
-/*--------------------------- MAIN TERCERO ----------------------------------*/
-/*-------------------------------------------------------------------------------*/
+
+
+/*--------------------------------------------------*/
+/*------------------ MAIN TERCERO ------------------*/
+/*--------------------------------------------------*/
 main .ternario{
     margin-top: 20px;
-    min-height: 70vh;
+    min-height: 100vh;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     opacity: 0;
     transition: all 0.8s ease;
+    background-color: rgba(0,0,0,0.4);
+    padding-top: 22px ;
+    padding-bottom: 26px;
 }
 main .ternario .contacto{
     width: 40%;
@@ -260,6 +213,7 @@ main .ternario .contacto{
     align-items: center;
     flex-direction: column;
     text-align: left;
+    gap: 11px ;
 }
 main .ternario .contacto .titulo_contacto{
     font-size: 40px;
@@ -267,7 +221,7 @@ main .ternario .contacto .titulo_contacto{
 }
 main .ternario .contacto .contacto_unitario{
     display: flex;
-    justify-content:center;
+    justify-content:space-between;
     align-items: center;
     gap: 25px;
     text-align: left;
@@ -278,9 +232,15 @@ main .ternario .contacto .contacto_unitario a{
     text-align: left;
     font-size: 18px;
     font-variant: small-caps;
-    transition: transform 0.6s ease;
-    
-    
+    transition: transform 0.6s ease; 
+}
+main .ternario .contacto .contacto_unitario a .img_container img {
+    width: 70px;
+    height: 70px;
+    border-radius: 100%;
+    background-color: #fff;
+    border: 2px solid #ccc;
+
 }
 main .ternario .contacto .contacto_unitario .a_contacto{
     border-radius: 20px 5%;
@@ -321,79 +281,153 @@ main .ternario .contacto .contacto_unitario .gmail:hover{
 main .ternario .contacto_adicional{
     width: 60%;
     min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 main .ternario .contacto_adicional img{
-    max-height: 70vh !important;
+    max-width: 680px;
+    border-radius: 100%;
+    width: auto;
+}
 
-}
-main .ternario .contacto_adicional .contenedor{
-    position: relative;
-    height: 70vh;
-    overflow: hidden;
-    width: 100%;
-}
-main .ternario .contacto_adicional .parallax{
-    position: absolute;
-    width: 100%;
-    background-image: url(../img/logo_code.png);
-    background-size: cover;
-    height: 120vh;
-}
 
 main .ternario .contacto .contacto_unitario .whatsaap{
     background-color: #0C9021;
 }
 main .ternario .contacto .contacto_unitario .telegram{
-    background-color: #088DB7;
+    background-color: #2d58ad;
 }
 main .ternario .contacto .contacto_unitario .facebook{
-    background-color: #2C5EE0;
+    background-color: #1f1f21;
 }
 main .ternario .contacto .contacto_unitario .gmail{
     background-color: #DF0000;
 }
+
+
+main .cuarto{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    min-height: 100vh;
+    width: 100%;
+    padding-top: 32px ;
+    padding-bottom: 16px;
+}
+main .cuarto .skills {
+    margin-top: 20px;
+    width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+main .cuarto .skills .todoskills {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    padding: 18px;
+}
+
+main .cuarto .skills .todoskills .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 120px;
+    gap: 8px;
+}
+
+main .cuarto .skills .todoskills .logo img {
+    transition: all 0.6s ease;
+    width: 130px;
+    max-height: 130px;
+    border-radius: 100%;
+    padding: 10px;
+}
+
+main .cuarto .skills .todoskills .logo img:hover {
+    transform: rotateZ(-11deg);
+}
+cuarto
+main .cuarto .skills .todoskills .logo h1 {
+    text-align: center;
+
+}
+
+main .cuarto .skills .todoskills .sub_titulo {
+    font-size: 26px;
+}
+
+main .cuarto .skills .todoskills .sub_titulo::after,
+main .cuarto .skills .titulo_aux::after {
+    content: "";
+    height: 8px;
+    width: 0;
+    background: var(--color-principal);
+    display: block;
+    transition: all 300ms;
+}
+
+main .cuarto .skills .todoskills .sub_titulo:hover::after,
+main .cuarto .skills .titulo_aux:hover::after {
+    width: 100%;
+    cursor: pointer;
+}
+
 footer{
     margin: 0;
     padding: 0;
     width: 100%;
-    min-height: 30vh;
-    background-color: var(--color-principal);
+    min-height: 100vh;
     border-radius: 25px 25px / 25px 25px 0px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 34px;
+}
+footer .contenedor{
+    width: 80%;
+    height: 230px;
+    border-radius: 10px;
+    border: 2px solid #1f1f21;
+    padding: 16px;
+    transition: all 0.3s ease;
+    &:hover{
+        border: 2px solid #5c5c68;
+    }
+}
+footer .contenedor a {
+    text-decoration: none;
+    &:hover{
+        text-decoration: underline;
+    }
+}
+footer .contenedor a h3{
+    margin-top: 10px;
+    text-align: center;
+    color: #efefef;
+}
+footer .contenedor a div{
+    margin-top: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 19px;
+}
+footer .contenedor a div img{
+    background-color: #fff;
+    border-radius: 100%;
+    border: 2px solid #fff;
+    max-width: 120px;
 }
 
-footer{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-footer .acerca_de_mi,footer .otros_datos{
-    height: 100%;
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-footer .acerca_de_mi .contenedor{
-    width: 500px;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 10px;
-}
-footer .otros_datos .contenedor{
-    width: 500px;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    flex-direction: column;
-    gap: 10px;
-}
-footer .acerca_de_mi .contenedor h1,footer .otros_datos .contenedor h1{
-    font-size: 22px;
-    letter-spacing: 1.3px;
-}
-footer .acerca_de_mi p{
-    font-size: 15px;
-    letter-spacing: 1.3px;
+footer .contenedor a div p {
+    font-size: 2em;
+    font-weight: 600;
 }

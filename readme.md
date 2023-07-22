@@ -1,4 +1,3 @@
 # Portafolio personal
-[![readme.jpg](https://i.postimg.cc/cLTx0Q3b/readme.jpg)](https://postimg.cc/zybZkH0C)
-# Terminado
+Is finish 27 of July 2023
     

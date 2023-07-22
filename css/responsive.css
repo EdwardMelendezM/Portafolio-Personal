@@ -51,38 +51,24 @@
     header nav{
         width: 100%;
     }
-    main .secundario .portafolio{
-        min-height: auto;
-        margin-top: 0;
+    main .secundario{
+        min-height: 200vh;
+        padding-bottom: 11px;
     }
-    main .secundario .portafolio .proyectos{
-        min-height: auto;
-        margin-top:0;
-        width: 90%; 
+    main .secundario .portalofio_contenedor {
+            display: grid;
+            grid-template-columns: 1fr;
     }
-    main .secundario .portafolio .proyectos .proyectos .proy{
-        height: auto;
-        margin:0;
-        width: 90%;
-    }
-
-    main .secundario .portafolio .proyectos .proy a img{
-        width: 98%;
-    }
-    main .secundario .portafolio button{
-        width: auto;
-        padding: 0px 10px;
-    }
-    main .secundario .skills{
+    main .cuarto .skills{
         margin-top: 50px;
     }
-    main .secundario .skills{
+    main .cuarto .skills{
         flex-direction: column;
     }
-    main .secundario .skills .todoskills .logo img{
+    main .cuarto .skills .todoskills .logo img{
         width: 100%;
     }
-    main .secundario .skills .todoskills .logo .sub_titulo{
+    main .cuarto .skills .todoskills .logo .sub_titulo{
         font-size   : 100%;
     }
     footer{
