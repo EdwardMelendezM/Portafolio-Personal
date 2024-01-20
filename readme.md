@@ -1,3 +1,7 @@
 # Portafolio personal
-Is finish 27 of July 2023
+Finished 27 of July 2023
+
+# Update
+Next update in february
+
     
